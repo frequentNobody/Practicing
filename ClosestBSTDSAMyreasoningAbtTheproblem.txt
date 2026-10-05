@@ -1,0 +1,45 @@
+My reasoning Abt the Closest Value in BST question 
+--------------------------------------------------------------
+
+is this question medium level ? Because i can see how can we do this approach like seriously , i have approach in my mind how to solve it and all but the thing is coding the problem is where i am stuck RN been practicing recursion for 1 month definately seeing some improvement mainly on The thinking mindset i know what to do and what not do but the coding part is where i mess up things T_T for ex in this question my approach is i think very good because see for ex k is 43 and the tree is like this 50 / \ 30 70 / \ / \ 20 40 60 80 / \ 35 45 so k is 43 now my approach is is 43<50 yes so this means that our minimum difference would be in the left subtree so we dont need to check the right sub tree at all so after this i do 43 < 30 is this truue ? No so we go right 43>30 so we go right and now we are in 40 so now i do 43 < 40 no so i do 43 > 40 so now go right and now we are in 45 and no we do 43<45 yes so go left but left is null so we stop and hence return the smallest dif we have found so far i am pretty sure this is very optimized code but the thing i am currently fighint is how can i do 50 - 43 after that 30 - 43 and after that 40 - 43 and after that 43 - 45 T_T , i am pretty sure my logic also works though and its using the BST property too i am sure of it , the storing part is a pain in ass cause each call value gets changed T_T i am being good at reasoning but the coding is giving me headache i have spent like 4 hrs on this problem srsly , still no code or hint though , and yeah the thing i am i think good in is base case and test case maybe and the best i am in is reasoning i think what u say ? No hint or code yet though
+
+
+AI summarization abt what i just said 
+--------------------------------------------
+
+I’ve been working on the Closest Value in BST problem, and I think my approach is actually pretty good even though I’m struggling with the coding part.
+
+For example, if `k = 43` and the tree is:
+
+
+             50
+           /    \
+         30      70
+        /  \    /  \
+      20   40  60   80
+          /  \
+         35   45
+
+
+I can use the BST property to only follow the path where the closest value can possibly be.
+
+* `43 < 50` → go left, no need to check the right subtree.
+* `43 > 30` → go right.
+* `43 > 40` → go right.
+* `43 < 45` → go left.
+* `45.left` is `null`, so stop.
+
+While going down, the differences are:
+
+`|50 - 43| = 7`
+`|30 - 43| = 13`
+`|40 - 43| = 3`
+`|45 - 43| = 2`
+
+So the answer is `2`.
+
+I’m pretty confident that the reasoning and the use of the BST property are correct. The part I’m struggling with is actually coding it, especially figuring out how to store the minimum difference/value while each recursive call has a different `root`.
+
+I’ve been practicing recursion for about a month. I can definitely feel improvement in my thinking, especially with reasoning, base cases, and coming up with test cases. But translating that reasoning into actual recursive code is still giving me a headache.
+
+I’ve already spent around 4 hours on this problem, but I don’t want to look at the solution yet. I want to figure out how to convert my own reasoning into code.
